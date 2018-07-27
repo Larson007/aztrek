@@ -1,0 +1,32 @@
+//puce
+//on met @include dans le css pour appeler la mixin
+// exemple: @include puce(0.75rem,$dark-gray); on indique aussi le $size et le $bgColor
+@mixin puce($size, $bgCol) {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background: $bgCol;
+        margin-right: $size;
+    }
+}
+
+//Button
+@mixin button($fontS, $bgCol, $col) {
+    display: inline-block;
+    background-color: $bgCol;
+    color: $col;
+    padding: 0.875rem 2em;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-size: $fontS;
+
+
+    &:hover,
+    &:focus {
+        background-color: darken($color: $grey, $amount: 20%);
+        color: $light-brown;
+    }
+}

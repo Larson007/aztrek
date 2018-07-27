@@ -1,0 +1,181 @@
+/*=============================================================
+--------------------------HEADER------------------------------
+=============================================================*/
+
+header {
+    .contact {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        margin: 2em auto 0;
+        width: 80%; //taille avec .container
+        img {
+            width: 1.2em;
+            margin: 0 0.7em 0 1.5em;
+        }
+        p,
+        a {
+            color: whitesmoke;
+            font-size: 1em;
+        }
+    }
+    .nav-top {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        list-style: none;
+        margin: 1em auto;
+        width: 80%; //taille avec .container
+        a {
+            color: whitesmoke;
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 1em 0;
+            text-transform: uppercase;
+            &:hover,
+            &:active {
+                color: #b7ac7f;
+            }
+        }
+    }
+    .header-contenu {
+        top: -20%;
+        .logo {
+            margin: 20% auto 0;
+            max-width: 40%;
+        }
+        .begin-journey {
+            width: 40%;
+        }
+    }
+}
+
+.nav-rs {
+    img {
+        width: 4em;
+    }
+}
+
+.contact-burger {
+    align-items: flex-start;
+    bottom: 5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: absolute;
+    img {
+        width: 1.2em;
+        margin-right: 1em;
+    }
+    a {
+        color: $light-grey;
+        font-size: 1.2em;
+    }
+    .phone,
+    .mail {
+        display: flex;
+        flex-direction: row;
+        margin: 0.5em 0;
+    }
+}
+
+.begin-journey {
+    padding: 0;
+    .begin-journey-txt {
+        font-weight: bold;
+        padding: 0.8em;
+        width: 20%;
+    }
+}
+
+/*=============================================================
+----------------------------MAIN------------------------------
+=============================================================*/
+
+
+
+.bg-block {
+    height: 300px;
+}
+
+.bg-destination{
+#destination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .destination-map {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .map {
+            position: relative;
+
+            a {
+                font-size: 1em;
+            }
+            .map-all {
+                left: 0;
+                opacity: 0.5;
+                top: 0;
+            }
+
+
+        }
+
+    }
+}
+}
+/*=============================================================
+--------------------------FOOTER------------------------------
+=============================================================*/
+
+/*=============================================================
+--------------------------PLUGIN JS------------------------------
+=============================================================*/
+
+// -------------------------- Carousel ------------------------------
+.carousel{
+.owl-carousel {
+    padding: 80px 60px;
+    .btn {
+        margin-top: auto;
+    }
+    .owl-nav button {
+        top: 5%;
+    }
+}
+}
+// -------------------------- Burger ------------------------------
+.burger {
+    width: 80px;
+    height: 80px;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 50px;
+    opacity: 0;
+    transition: 0.3s;
+    &.show {
+        opacity: 1;
+    }
+}
+
+.burger span {
+    top: 45%;
+    /*Position des lignes blanche du burger*/
+    left: 50%;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+    width: 40px;
+    height: 3px;
+    outline: 1px solid transparent;
+}
+
+nav ul.main li a {
+    font-size: 1.5rem;
+}
