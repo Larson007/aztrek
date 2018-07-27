@@ -1056,12 +1056,20 @@ nav ul.sub li a:hover {
       header .nav-top a:hover, header .nav-top a:active {
         color: #b7ac7f; }
   header .header-contenu {
-    top: -20%; }
+    margin-bottom: 0px; }
     header .header-contenu .logo {
-      margin: 20% auto 0;
+      margin: 100px auto 0;
       max-width: 40%; }
     header .header-contenu .begin-journey {
+      margin-bottom: 200px;
       width: 40%; }
+      header .header-contenu .begin-journey a {
+        font-size: 1.6rem;
+        width: 100%;
+        height: 50px;
+        line-height: 2em; }
+      header .header-contenu .begin-journey .fa-angle-down {
+        margin-top: 50px; }
 
   .nav-rs img {
     width: 4em; }
@@ -1098,22 +1106,24 @@ nav ul.sub li a:hover {
   .bg-block {
     height: 300px; }
 
-  .bg-destination #destination {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%; }
-    .bg-destination #destination .destination-map {
+  .bg-destination {
+    margin-top: 0px; }
+    .bg-destination #destination {
       display: flex;
       flex-wrap: wrap;
       width: 100%; }
-      .bg-destination #destination .destination-map .map {
-        position: relative; }
-        .bg-destination #destination .destination-map .map a {
-          font-size: 1em; }
-        .bg-destination #destination .destination-map .map .map-all {
-          left: 0;
-          opacity: 0.5;
-          top: 0; }
+      .bg-destination #destination .destination-map {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%; }
+        .bg-destination #destination .destination-map .map {
+          position: relative; }
+          .bg-destination #destination .destination-map .map a {
+            font-size: 1em; }
+          .bg-destination #destination .destination-map .map .map-all {
+            left: 0;
+            opacity: 0.5;
+            top: 0; }
 
   /*=============================================================
   --------------------------FOOTER------------------------------

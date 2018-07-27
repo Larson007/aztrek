@@ -1,85 +1,121 @@
-<?php
-require_once 'lib/functions.php';
-$utilisateur = current_user();
-?>
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ecolidaire - <?php echo $title; ?></title>
-        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+<!doctype html>
+<html lang="zxx">
 
-        <header class="site-header">
-            <div class="cta-header">
-                <div class="container">
-                    <ul class="cta-contact inline-list">
-                        <li>Téléphone : <a href="tel:0123456789">0123456789</a></li>
-                        <li>Email : <a href="mailto:contact@ecolidaire.fr">contact@ecolidaire.fr</a></li>
-                    </ul>
-                    <div class="cta-social">
-                        <ul class="inline-list">
-                            <?php if (empty($utilisateur)) : ?>
-                                <li>
-                                    <a href="admin/register.php">
-                                        <i class="fa fa-user-plus"></i>
-                                        Créer un compte
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="admin/login.php">
-                                        <i class="fa fa-sign-in"></i>
-                                        Se connecter
-                                    </a>
-                                </li>
-                            <?php else: ?>
-                                <?php if ($utilisateur["admin"] == 1) : ?>
-                                    <li>
-                                        <a href="admin/">
-                                            <i class="fa fa-toolbox"></i>
-                                            Administration
-                                        </a>
-                                    </li>
-                                <?php endif; ?>
-                                <li>
-                                    <a href="admin/logout.php">
-                                        <i class="fa fa-sign-out"></i>
-                                        Déconnexion
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                            <li>
-                                <a href="http://www.facebook.com">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www.twitter.com">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="container main-header">
-                <a href="index.php" class="logo">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <?php require_once 'layout/nav.php'; ?>
-            </div>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AZTREK - <?php echo $title; ?></title>
+  <link rel="shortcut icon" href="favicon/aztrek-ico.ico">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        <main>
+<body>
+    <header class="container">
+
+    <!-- /////////////////////VIDEO BG\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+    <video loop autoPlay class="bg_video" preload="auto" poster="images/home_header.jpg">
+      <source src="images/Video/pygmy-accueil-720p.mp4" type="video/mp4">
+    </video>
+
+
+    <!-- /////////////////////BURGER\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <div class="burger">
+      <span></span>
+    </div>
+
+    <div class="overlay"></div>
+
+    <nav class="nav">
+
+      <ul class="main">
+        <li>
+          <a href="" class="font-effect-splintered">Accueil</a>
+        </li>
+        <li>
+          <a href="" class="font-effect-splintered">Destinations</a>
+        </li>
+        <li>
+          <a href="" class="font-effect-splintered">Espace Communautaire</a>
+        </li>
+        <li>
+          <a href="" class="font-effect-splintered">Contact & Devis</a>
+        </li>
+      </ul>
+
+      <!-- ===============Réseaux Sociaux================= -->
+
+      <div class="nav-rs">
+        <a href="">
+          <img src="images/facebook-square.svg" alt="">
+        </a>
+        <a href="">
+          <img src="images/twitter-square.svg" alt="">
+        </a>
+        <a href="">
+          <img src="images/instagram.svg" alt="">
+        </a>
+      </div>
+
+      <!-- ===============Contact Burger================= -->
+
+      <div class="contact-burger">
+        <a href="tel:0610580039" class="phone">
+          <img src="images/phone.svg" alt="">: 08.10.58.00.39
+        </a>
+        <a href="mailto:mohamed_benallal@msn.com" class="mail">
+          <img src="images/envelope.svg" alt="">: contact-info@aztrek.com
+        </a>
+      </div>
+
+    </nav>
+
+
+
+    <!-- +++++++++++++++++++++CONTACT+++++++++++++++++++++ -->
+    <div class="contact">
+      <a href="tel:0610580039">
+        <img src="images/phone.svg" alt="">
+      </a>
+      <a href="tel:0610580039">: 08.10.58.00.39</a>
+      <a href="mailto:mohamed_benallal@msn.com">
+        <img src="images/envelope.svg" alt="">
+      </a>
+      <a href="mailto:mohamed_benallal@msn.com">: contact-info@aztrek.com</a>
+    </div>
+
+    <!-- +++++++++++++++++++++MENU NAV+++++++++++++++++++++ -->
+
+    <ul class="nav-top">
+      <li>
+        <a href="" class="font-effect-splintered">Accueil</a>
+      </li>
+      <li>
+        <a href="" class="font-effect-splintered">Destinations</a>
+      </li>
+      <li>
+        <a href="" class="font-effect-splintered">Espace Communautaire</a>
+      </li>
+      <li>
+        <a href="" class="font-effect-splintered">Contact & Devis</a>
+      </li>
+    </ul>
+
+    <!-- +++++++++++++++++++++ LOGO +++++++++++++++++++++ -->
+    <div class="header-contenu container">
+      <img src="images/Logo/logo-clair.png" alt="" width="600" height="500" class="logo">
+      <div class="begin-journey">
+        <a href="#destination" class="begin-journey-txt">Commencer votre aventure</a>
+        <i class="fas fa-angle-down"></i>
+      </div>
+    </div>
+  </header>
